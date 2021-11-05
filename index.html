@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let str = prompt('Напишите текст: ');
+
+        str = str.toLowerCase();
+
+        let count = 0;
+       
+
+        let glas = ["а", "о", "и", "е", "ё", "э", "ы", "у", "ю", "я"];
+       
+        function words() {
+
+            for (let i = 0; i < glas.length; i++) {
+                for (let j = 0; j < str.length; j++) {
+
+                    if (glas[i] == str[j]) {
+                        count++;
+                    } 
+                }
+            }
+            return count ? "Сумма гласных букв = " + count : "В вашем тексте нет гласных букв!";
+        }
+
+        alert(words());
+
+    </script>
+</body>
+
+</html>
